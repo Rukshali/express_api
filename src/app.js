@@ -11,6 +11,28 @@ const router = require("./routers/r");
 app.use(express.json());
 app.use(router);
 
+/* login api
+app.get("/login",(req,res)=>{
+    res.render("login");
+});
+
+app.post("/login",async(req,res)=>{
+    try{
+        const email = req.body.email;
+        const password = req.body.password;
+
+        const useremail = await rdb.findOne({email:email});
+        if(useremail.password === password){
+            res.status(201).render("index");
+        }else{
+            res.send("Password not matched");
+        }
+    } catch(error){
+        res.status(400).send("Invalid Email");
+    }
+});
+*/
+
 app.get("/",(req,res)=>{
     res.send("hello");
 })

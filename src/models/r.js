@@ -23,4 +23,5 @@ const rSchema = new mongoose.Schema({
     },
 });
 const rdb = new mongoose.model("r",rSchema)
+
 module.exports = rdb;
